@@ -25,6 +25,8 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  z-index: 10;
+  position: relative;
 }
 
 .logo {
@@ -39,6 +41,11 @@ nav ul {
   gap: 1rem;
   list-style: none;
   align-items: center;
+  z-index: 1000;
+  position: relative;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+  max-height: none;
 }
 
 nav a {
@@ -52,6 +59,8 @@ nav a {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  z-index: 1001;
+  position: relative;
 }
 
 .menu-toggle span {
@@ -67,13 +76,12 @@ nav a {
   nav ul {
     flex-direction: column;
     width: 100%;
-    display: none;
     background-color: #6f42c1;
-    padding: 1rem 0;
+    max-height: 0;
   }
 
   nav ul.show {
-    display: flex;
+    max-height: 500px;
   }
 
   .menu-toggle {
