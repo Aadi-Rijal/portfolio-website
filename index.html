@@ -25,6 +25,12 @@
         <li><label class="switch"><input type="checkbox"/><span class="slider"></span></label></li>
       </ul>
     </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
   </header>
 
   <div id="particles-js"></div>
@@ -48,5 +54,11 @@
 
   <script src="script.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    function toggleMenu() {
+      const navUl = document.querySelector('nav ul');
+      navUl.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
